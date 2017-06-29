@@ -4,7 +4,7 @@ source("get_stocks.R")
 
 get_quandl_data <- function(stxlist) {
   for(ticker in stxlist) { #gets Volume & AdjVolume, assigns data to ticker_table
-    cmd_line <- paste0('myData <- Quandl.datatable("WIKI/PRICES", qopts.columns=c("ticker", "date", "close", "adj_close"), ticker=c("', ticker,'"), date.gte=c("', com.env$start_date, '"), date.lte=c("', com.env$end_date,'"))')
+    cmd_line <- paste0('myData <- Quandl.datatable("WIKI/PRICES", qopts.columns=c("ticker", "date", "volume", "adj_volume"), ticker=c("', ticker,'"), date.gte=c("', com.env$start_date, '"), date.lte=c("', com.env$end_date,'"))')
     print(cmd_line)
     eval(parse(text = cmd_line))
     cmd_line <- paste0("var.env$",ticker,"_table <- myData")

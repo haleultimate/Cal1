@@ -8,17 +8,23 @@ calc_shout <- function(stxlist) {
     print(n)
     shout_col <- NULL
     for(i in 1:n) {
+      
       cmd_line <- paste0("shout_col<- c(shout_col,as.numeric(com.env$shout_list['",ticker,"'])/(as.numeric(",ticker_table, "[,4][i])/as.numeric(",ticker_table,"[,3][i])))")
       
       eval(parse(text = cmd_line))  
+
     }
+    print(shout_col)
+    cmd_line <- paste0("shout.xts <- xts(shout_col,as.Date(",ticker_table,"[,2]))")
+    print(cmd_line)
+    eval(parse(text = cmd_line))
     # cmd_line <- paste0(ticker,".Shout <- shout_col")
     # print(cmd_line)
     # eval(parse(text=cmd_line))
     # cmd_line <- paste0(ticker_table, "<- cbind(",ticker_table,",",ticker,".Shout)")
     # print(cmd_line)
     # eval(parse(text = cmd_line))  
-    shout_table <- cbind(shout_table,shout_col)
+    shout_table <- cbind(shout_table,shout.xts)
     colnames(shout_table)[ncol(shout_table)] <- ticker
   }
   return(shout_table)
