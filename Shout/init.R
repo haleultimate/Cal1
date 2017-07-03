@@ -10,7 +10,8 @@ library(Quandl)
 library(dplyr)
 library(data.table)
 library(xts)
+library(quantmod)
 Quandl.api_key("uTjzMRaw3tYDH6Dsbh2A")
-source("get_data.R")
-source("get_stocks.R")
-source("get_shout.R")  #load function libraries
+source("Shout/get_data.R")
+source("C:/RDirectory/Cal1/Shout/get_stocks.R")
+source("Shout/get_shout.R")  #load function libraries

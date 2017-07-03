@@ -1,7 +1,7 @@
 get_stock_list <- function() {
   symbols <- c(
-    #"XLF", # Financial sector ETF
-    #"BRK-B",    not valid name
+    "XLF", # Financial sector ETF
+   # "BRK-B",    #not valid name
     "JPM",
     "WFC",
     "BAC",
@@ -59,39 +59,39 @@ get_stock_list <- function() {
     "LUK",
     "AIZ",
     "LM",
-  #  "GDX", #gold miners ETF
-   # "ABX",
+     "GDX", #gold miners ETF
+     "ABX",
     "NEM",
-    #"GG",
-    #"FNV",
-    #"AEM",
-    #"SLW",
+    "GG",
+    "FNV",
+    "AEM",
+    "SLW",
     "GOLD",
-    #"AU",
+    "AU",
     "RGLD",
-    #"KGC",
-    #"BVN",
+    "KGC",
+    "BVN",
     "TAHO",
-    #"AUY",
-    #"GFI",
-    #"EGO",
-    #"PAAS",
-    #"BTG",
+    "AUY",
+    "GFI",
+    "EGO",
+    "PAAS",
+    "BTG",
     "HL",
-    #"AGI",
-    #"NGD",
-    #"IAG",
+    "AGI",
+    "NGD",
+    "IAG",
     "CDE",
-    #"SBGL",   #too recent
-    #"AG",
-    #"SSRI",
-    #"OR",    #problem loading data from YHOO
-    #"HMY",
-    #"MUX",
-    #"KLDX",
-    #"AKG",
-    #"SAND",
-   # "XLE", #Energy ETF
+    "SBGL",   #too recent
+    "AG",
+    "SSRI",
+    "OR",    #problem loading data from YHOO
+    "HMY",
+    "MUX",
+    "KLDX",
+    "AKG",
+    "SAND",
+    "XLE", #Energy ETF
     'CVX',
     'SLB',
     'COP',
