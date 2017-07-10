@@ -9,7 +9,7 @@ get_quandl_data <- function(stxlist) {
     print(cmd_line)
     eval(parse(text = cmd_line))
     if(length(myData[,1]) == 0) {
-      cmd_line <-paste0("getSymbols(Symbols ='",ticker,"',env=var.env,src = 'yahoo', index.class = 'POSIXct',from = '",com.env$start_date,"', to = '",com.env$end_date,"',)")
+      cmd_line <-paste0("getSymbols(Symbols ='",ticker,"',env=var.env,src = 'yahoo', index.class = 'POSIXct',from = '",com.env$start_date,"', to = '",com.env$end_date2,"',)")
       print(cmd_line)
       eval(parse(text = cmd_line))
       cmd_line <- paste0("var.env$",ticker," <- data.frame(index(var.env$",ticker,"),var.env$",ticker,"[,4],var.env$",ticker,"[,6])")
